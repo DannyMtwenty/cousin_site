@@ -6,7 +6,6 @@ asgiref==3.3.4
 attrs==21.2.0
 Babel==2.9.1
 billiard==3.3.0.23
-celery==3.1.26.post2
 certifi==2021.5.30
 cffi==1.14.5
 chardet==4.0.0
