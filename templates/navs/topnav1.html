@@ -1,0 +1,40 @@
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center m-0" style="position: fixed !important; width: 100%;">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="/">United Cousins</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+
+          <li><a class="nav-link scrollto " href="{% url 'gallery' %}">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="#team">Add Members</a></li>
+
+          <li class="dropdown"><a href="#"><span>Activities</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Visiting</a></li>
+              <li class="dropdown"><a href="#"><span>More</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Contributions</a></li>
+                  <li><a href="#">Parties</a></li>
+                  <li><a href="#">Greetings</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Hike</a></li>
+
+            </ul>
+          </li>
+
+          <li><a class="getstarted scrollto" href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+
+  </header>

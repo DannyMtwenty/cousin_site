@@ -1,0 +1,105 @@
+{% include 'navs/topnav1.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+.thumb{
+    height: 200px;
+}
+
+    </style>
+</head>
+
+
+{% block content %}
+
+
+<div class="card " >
+ <div class="card-header bg-success text-white">
+    Chairperson
+  </div>
+  <div class="card-body">
+
+
+
+<article class=" col-lg col-lg-12">
+
+
+<div class="col-lg col-lg-12">
+
+<div class="col-lg col-lg-12">
+<button class="btn btn-primary my-2" type="button" disabled="">
+  Member Details</button>
+</div>
+
+  <div class="row">
+
+   <div class="col-lg col-lg-6">
+  <table class="table border-success ">
+
+    <thead>
+      <tr class="">
+        <td>Member Contact</td>
+        <td>{{user.email}}</td>
+      </tr>
+      <tr class="">
+        <td>First Name</td>
+        <td>{{user.first_name}}</td>
+      </tr>
+      <tr class="info">
+        <td>Middle Name</td>
+        <td>{{user.username}}</td>
+      </tr>
+      <tr class="warning">
+        <td>Last Name</td>
+        <td>{{user.last_name}}</td>
+      </tr>
+      <tr class="info">
+        <td>Role</td>
+        <td></td>
+      </tr>
+
+
+    </thead>
+    <tbody>
+
+    </tbody></table>
+
+</div>
+
+
+
+<div class="col-md col-md-3">
+ <div class="card-image col-md col-md-2">
+          <img src="{% static 'assets/img/clients/memberpic.jpg' %}" class="thumb">
+
+        </div>
+
+</div>
+
+  </div>
+
+
+
+
+
+
+</div>
+		</article>
+
+
+  </div>
+</div>
+
+
+
+
+{% include 'footer.html' %}
+</html>
+{% endblock %}

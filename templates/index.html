@@ -32,6 +32,15 @@
   <!-- =======================================================
   
   ======================================================== -->
+
+    <style>
+      .thumbnail{
+          height: 200px !important;
+          width: 60% !important;
+          border-radius:0px !important;
+      }
+
+    </style>
 </head>
 
 <body>
@@ -47,7 +56,7 @@
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
   </section>
@@ -65,27 +74,26 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto " href="{% url 'gallery' %}">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="#team">Members</a></li>
+
+          <li class="dropdown"><a href="#"><span>Activities</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+              <li><a href="#">Visiting</a></li>
+              <li class="dropdown"><a href="#"><span>More</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
+                  <li><a href="#">Contributions</a></li>
+                  <li><a href="#">Parties</a></li>
+                  <li><a href="#">Greetings</a></li>
                 </ul>
               </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Hike</a></li>
+
             </ul>
           </li>
+
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="/accounts/register">Login</a></li>
+          <li><a class="getstarted scrollto" href="/accounts/login">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -106,7 +114,7 @@
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Welcome to <span>United Cousins Website</span></h2>
-              <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <p class="animate__animated animate__fadeInUp">Family is one of the most important, if not the most important thing in our lives. Taking time every day to appreciate your loved ones for all that they do helps us to reconnect as a family. </p>
               <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
             </div>
           </div>
@@ -116,8 +124,8 @@
         <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-2.jpg' %})">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-              <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <h2 class="animate__animated animate__fadeInDown">Family Times</h2>
+              <p class="animate__animated animate__fadeInUp"> Nothing is better than going home to family and eating good food and relaxing</p>
               <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
             </div>
           </div>
@@ -127,8 +135,8 @@
         <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-3.jpg' %})">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-              <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <h2 class="animate__animated animate__fadeInDown">Blessed cords</h2>
+              <p class="animate__animated animate__fadeInUp">Having somewhere to go is home. Having someone to love is family. And having both is a blessing.</p>
               <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
             </div>
           </div>
@@ -149,7 +157,7 @@
 
   <main id="main">
 
-    <!-- ======= Featured Services Section ======= -->
+    <!-- ======= Featured Services Section =======
     <section id="featured-services" class="featured-services section-bg">
       <div class="container">
 
@@ -178,6 +186,8 @@
         </div>
 
       </div>
+
+      -->
     </section><!-- End Featured Services Section -->
 
     <!-- ======= About Us Section ======= -->
@@ -186,7 +196,7 @@
 
         <div class="section-title">
           <h2>About Us</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p> The most important thing in the world is family and love.</p>
         </div>
 
         <div class="row">
@@ -194,20 +204,21 @@
             <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <h3>Lifelong Friendship</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+             Cousins are friends that will love you forever." "Time passes and we may be apart,
+                but cousins always stay close at heart." "In my cousin, I find a second self."
+                "We may not have it all together, but together we have it all.
             </p>
             <ul>
-              <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-            </ul>
+              <li><i class="bi bi-check-circled"></i> Cousins help to fill in the gap and remind you that you have not lost all of your family because they still got you. .</li>
+                </ul>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
+                If you’re lucky enough to have a cousin or two, you know how precious they can be in your life.
+                For those with and without siblings, they can act as a sort of surrogate sibling—either as an older mentor you look up to,
+                a peer you relate to, or a younger sibling that you get to dote on.
+              The best part about these semi-siblings is that you get to make memories with them over special holidays and
+                vacations, but don’t have to, you know, share your toys with them day-to-day.
             </p>
           </div>
         </div>
@@ -215,7 +226,7 @@
       </div>
     </section><!-- End About Us Section -->
 
-    <!-- ======= Why Us Section ======= -->
+    <!-- ======= Why Us Section =======
     <section id="why-us" class="why-us">
       <div class="container">
 
@@ -260,9 +271,10 @@
         </div>
 
       </div>
+      -->
     </section><!-- End Why Us Section -->
 
-    <!-- ======= Our Clients Section ======= -->
+    <!-- ======= Our Clients Section =======
     <section id="clients" class="clients">
       <div class="container">
 
@@ -286,9 +298,10 @@
         </div>
 
       </div>
+      -->
     </section><!-- End Our Clients Section -->
 
-    <!-- ======= Services Section ======= -->
+    <!-- ======= Services Section =======
     <section id="services" class="services">
       <div class="container">
 
@@ -379,6 +392,7 @@
         </div>
 
       </div>
+      -->
     </section><!-- End Services Section -->
 
     <!-- ======= Cta Section ======= -->
@@ -388,32 +402,33 @@
         <div class="row">
           <div class="col-lg-9 text-center text-lg-start">
             <h3>Call To Action</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
+            <p>A good cousin will be there when you need them. When you are going through something that you feel like you cannot share with your mom, dad or even best school friend, you always got your cousin to get you through. Cousins will be there to talk with you,
+                laugh with you and shade you when you need it most. </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
+            <a class="cta-btn align-middle" href="#">Home</a>
           </div>
         </div>
 
       </div>
     </section><!-- End Cta Section -->
 
-    <!-- ======= Portfolio Section ======= -->
+    <!-- ======= Portfolio Section =======
     <section id="portfolio" class="portfolio">
       <div class="container">
 
         <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Gallery</h2>
+          <p>My cousins are some of my closest friends.Lets see some of the photos and pictures.</p>
         </div>
 
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter="*" class="filter-active">Samples</li>
+              <li data-filter=".filter-app">Album</li>
+              <li data-filter=".filter-card">Few</li>
+              <a href="{% url 'gallery' %}" >All</a>
+
             </ul>
           </div>
         </div>
@@ -421,6 +436,7 @@
         <div class="row portfolio-container">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              {% for img in photo %}
             <div class="portfolio-wrap">
               <img src="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt="">
               <div class="portfolio-info">
@@ -432,6 +448,7 @@
                 </div>
               </div>
             </div>
+              {% endfor %}
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
@@ -549,7 +566,9 @@
         </div>
 
       </div>
-    </section><!-- End Portfolio Section -->
+    </section>
+ -->
+<!-- End Portfolio Section -->
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
@@ -557,21 +576,19 @@
 
         <div class="section-title">
           <h2>Members</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>A cousin is someone whose smile helps when the roads are rough and long.</p>
         </div>
-    
+
         <div class="row">
          {% for member in members %}
-         
+
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
-               
-              <img src="{{member.img.url}}" alt="img">
+
+              <img src="{{member.img.url}}" class="thumbnail" alt="img">
              <h4>{{ member.FirstName }} {{ member.LastName }}</h4>
               <span>{{ member.role }}</span>
-              <p>
-                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-              </p>
+              <p>  </p>
               <div class="social">
                 <a href=""><i class="bi bi-twitter"></i></a>
                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -581,7 +598,7 @@
             </div>
           </div>
 {% endfor %}
-         
+
 
       </div>
     </section><!-- End Team Section -->
@@ -592,7 +609,7 @@
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>What do you think about this website?Tell me I will get back to you😎.</p>
         </div>
 
         <div class="row">
@@ -602,22 +619,22 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Nyeri, Kenya</p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>dannywanyoike@gmail.com</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <p>+254790561196</p>
               </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+           <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63835.211894175714!2d36.9176815147665!3d-0.4398688876750364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18285dfed09e0ebf%3A0x829716f702f65e9e!2sNyeri!5e0!3m2!1sen!2ske!4v1622393885039!5m2!1sen!2ske" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
 
           </div>
